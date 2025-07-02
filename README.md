@@ -6,4 +6,4 @@ This project is an in-progress effort to recreate a significant portion of the f
 
 
 
-THIS IS WORK IN PROGRESS USE WITH CAUTION.
+THIS IS A WORK IN PROGRESS USE WITH CAUTION.
