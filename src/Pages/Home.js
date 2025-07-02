@@ -1,26 +1,26 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import cteIcon from '../Icons/cteicon.png';
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import cteIcon from "../Icons/cteicon.png";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   const frontpageStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '20px',
-    padding: '1rem'
+    display: "flex",
+    alignItems: "center",
+    gap: "20px",
+    padding: "1rem",
   };
 
   // The style that will override the conflicting CSS from your stylesheet.
   const iconStyle = {
-    position: 'static' // ✨ This is the key change to fix the overlap.
+    position: "static", // ✨ This is the key change to fix the overlap.
   };
 
   return (
     <div>
-      <div className='Frontpage' style={frontpageStyle}>
+      <div className="Frontpage" style={frontpageStyle}>
         <img
           src={cteIcon}
           alt="CTE Icon"
@@ -37,11 +37,9 @@ const Home = () => {
           <Button variant="secondary">Challenges</Button>
         </Link>
       </div>
-      <div>
-        {/* Your other page content goes here */}
-      </div>
+      <div>{/* Your other page content goes here */}</div>
     </div>
   );
-}
+};
 
 export default Home;
