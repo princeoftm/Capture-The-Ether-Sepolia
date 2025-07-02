@@ -12,6 +12,8 @@ import Challenge2 from './Challenges/Challenge3/Challenge3';
 import Challenge3 from './Challenges/Challenge4/Challenge4';
 import Challenge4 from './Challenges/Challenge5/Challenge5';
 import Challenge5 from './Challenges/Challenge6/Challenge6';
+import { Analytics } from '@vercel/analytics/next';
+
 function App() {
   return (
     <Router>
@@ -32,6 +34,8 @@ function App() {
           <Route path="/Challenge6" element={<Challenge5 />} />
 
         </Routes>
+        <Analytics />
+
       </div>
     </Router>
   );
