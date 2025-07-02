@@ -34,7 +34,8 @@ const Resources = () => {
   };
 
   const listItemStyle = {
-    marginBottom: '1rem'
+    marginBottom: '1.2rem',
+    lineHeight: '1.6'
   };
 
   return (
@@ -57,42 +58,69 @@ const Resources = () => {
         </Link>
       </div>
       <div style={resourceContainerStyle}>
-        <h2 style={headingStyle}>Tools to use</h2>
+        <h2 style={headingStyle}>Essential Tools</h2>
         <ul style={listStyle}>
           <li style={listItemStyle}>
-            <strong>Etherscan</strong> – Etherscan is useful for viewing accounts and transactions on the block chain, among other things.
+            <strong>Hardhat</strong> – An Ethereum development environment that facilitates building on Ethereum. It's known for its ease of use and extensibility through plugins.
           </li>
           <li style={listItemStyle}>
-            <strong>Remix</strong> – Remix can be used to compile and deploy contracts. It can also be used to interact with an already-deployed contract.
+            <strong>Foundry</strong> – A blazing fast, portable, and modular toolkit for Ethereum application development written in Rust, often favored for its performance.
           </li>
           <li style={listItemStyle}>
-            <strong>MyEtherWallet</strong> – MEW is another tool that can be used to interact with deployed contracts. You'll need the ABI for the contract, which you can get by compiling it.
+            <strong>Truffle Suite</strong> – A comprehensive development environment, testing framework, and asset pipeline for blockchains using the EVM.
+          </li>
+          <li style={listItemStyle}>
+            <strong>Remix IDE</strong> – An open-source web IDE for Solidity contract development. Excellent for learning and quick prototyping directly in the browser.
+          </li>
+          <li style={listItemStyle}>
+            <strong>Etherscan</strong> – The leading block explorer and analytics platform for Ethereum. Essential for viewing transactions, addresses, and other on-chain activities.
+          </li>
+           <li style={listItemStyle}>
+            <strong>MyEtherWallet (MEW)</strong> – A free, client-side interface helping you interact with the Ethereum blockchain, generate wallets, and more.
+          </li>
+           <li style={listItemStyle}>
+            <strong>Ganache</strong> – A personal blockchain for Ethereum development you can use to deploy contracts, develop your applications, and run tests.
+          </li>
+           <li style={listItemStyle}>
+            <strong>Security Analysis Tools</strong> – A suite of tools to ensure smart contract security. Notable examples include <strong>Slither</strong> (static analysis) and <strong>Echidna</strong> (fuzzing).
           </li>
         </ul>
 
-        <h2 style={headingStyle}>Things to read</h2>
+        <h2 style={headingStyle}>Essential Reading & Learning Platforms</h2>
         <ul style={listStyle}>
           <li style={listItemStyle}>
-            <strong>Program the Blockchain</strong> – This is where I blog about smart contracts, so as you can imagine, there's a lot of useful content there.
+            <strong>Alchemy University</strong> – Offers comprehensive, free courses on Web3 development, including the popular "Road to Web3" program.
           </li>
           <li style={listItemStyle}>
-            <strong>Solidity documentation</strong> – The Solidity documentation isn't always the best written, but it's fairly comprehensive.
+            <strong>Cyfrin Updraft</strong> – A platform offering a range of courses from beginner to advanced levels, focusing on secure smart contract development.
           </li>
           <li style={listItemStyle}>
-            <strong>The yellow paper</strong> – Notoriously hard to read, the yellow paper is nonetheless the definitive source for details about Ethereum and the Ethereum Virtual Machine (EVM).
+            <strong>CryptoZombies</strong> – An interactive, game-based tutorial that teaches you to write smart contracts in Solidity through building your own crypto-collectible game.
+          </li>
+          <li style={listItemStyle}>
+            <strong>Solidity Documentation</strong> – The official documentation for the Solidity programming language. The most accurate and up-to-date resource.
+          </li>
+          <li style={listItemStyle}>
+            <strong>Mastering Ethereum</strong> – A comprehensive book that provides a deep dive into the Ethereum ecosystem, from basics to advanced topics.
+          </li>
+           <li style={listItemStyle}>
+            <strong>Coursera & Udemy</strong> – These platforms host a wide variety of blockchain courses from universities and industry experts.
           </li>
         </ul>
 
-        <h2 style={headingStyle}>Code libraries</h2>
+        <h2 style={headingStyle}>Essential Code Libraries</h2>
         <ul style={listStyle}>
           <li style={listItemStyle}>
-            <strong>web3.js</strong> – web3.js is the standard JavaScript client library for working with Ethereum.
+            <strong>web3.js</strong> – The official JavaScript library for interacting with the Ethereum blockchain.
           </li>
           <li style={listItemStyle}>
-            <strong>ethereumjs</strong> – The ethereumjs suite of Node.js modules are quite useful.
+            <strong>Ethers.js</strong> – A complete and compact library for interacting with the Ethereum Blockchain, a popular and modern alternative to web3.js.
           </li>
           <li style={listItemStyle}>
-            <strong>web3.py</strong> – This is essentialy web3.js but for Python.
+            <strong>web3.py</strong> – The Python library for building applications that interact with the Ethereum blockchain.
+          </li>
+           <li style={listItemStyle}>
+            <strong>OpenZeppelin Contracts</strong> – A library of secure and community-vetted smart contracts. An indispensable resource for building secure dApps.
           </li>
         </ul>
       </div>

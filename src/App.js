@@ -31,7 +31,6 @@ function App() {
           <Route path="/Challenge4" element={<Challenge3 />} />
           <Route path="/Challenge5" element={<Challenge4 />} />
           <Route path="/Challenge6" element={<Challenge5 />} />
-
         </Routes>
 
       </div>
