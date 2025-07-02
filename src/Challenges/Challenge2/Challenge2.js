@@ -200,7 +200,7 @@ const iscompletecheck = async () => {
       </div>
       <div class="two-columns">
         <div class="column">
-          <h1> Deploy A Contract</h1>
+          <h1> Call A Contract</h1>
           <h4>WARMUP:50 points</h4>
           <Card.Body>
     <Card.Text>

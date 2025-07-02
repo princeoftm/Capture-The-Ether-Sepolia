@@ -50,6 +50,24 @@ const Challenges = () => {
     <li>
     <Link to="/Challenge2">Challenge 2: Call me</Link>
   </li>
+      <li>
+      <Link to="/Challenge3">Challenge 3: Set Your nickname  </Link>
+  </li>
+
+</ol>
+<h1>
+Lotteries
+</h1>
+<ol>
+    <li>
+      <Link to="/Challenge4">Challenge 4: Guess The number  </Link>
+    </li>
+      <li>
+      <Link to="/Challenge5">Challenge 5:Guess the secret number </Link>
+    </li>
+    <li>
+      <Link to="/Challenge6">Challenge 6:Predict the block hash </Link>
+    </li>
 </ol>
 
         </div>
