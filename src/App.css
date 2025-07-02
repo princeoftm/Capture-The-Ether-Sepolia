@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container-three-columns {
+  display: grid; /* Establishes a grid container */
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 columns of equal width */
+  gap: 20px; /* Adds space between grid items (columns) */
+}
+
+.column {
+  padding: 15px; /* Adds internal padding */
+  /* Optional: Add a border or background for visual separation */
+  /* border: 1px solid #ccc; */
+  /* background-color: #f9f9f9; */
+}
+
+/* Basic responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .container-three-columns {
+    grid-template-columns: 1fr; /* Stacks columns into a single column on small screens */
+  }
+}
+.Frontpage {
+  background: #1E9AB0;
+  min-height: 15vh; /* Makes it as tall as the viewport */
+  position: relative; /* Crucial for positioning the icon inside */
+}
+
+.welcomepageheader{
+  color: white;
+  font-size: 70px;
+}
+.fronttext{
+  color: white;
+  font-size: 40px;
+
+}
+
+
+
+p{
+    font-size: 20px;
+
+}
+
+.HomeIcon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px; /* Optional: adds a little space from the edge */
+
+}
+
+.two-columns{
+  display: grid; /* Establishes a grid container */
+  grid-template-columns: repeat(2, 1fr); /* Creates 3 columns of equal width */
+}
+
+pre {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: monospace;
+}
