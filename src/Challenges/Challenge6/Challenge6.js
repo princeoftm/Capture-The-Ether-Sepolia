@@ -7,8 +7,7 @@ import { ethers } from "ethers";
 import { Button, Card } from "react-bootstrap";
 import React, { useState } from "react";
 const { Web3 } = require("web3");
-const bytecode =
-  "60806040525f60035f6101000a81548160ff0219169083151502179055503480156027575f5ffd5b50610370806100355f395ff3fe608060405260043610610033575f3560e01c806311da60b414610037578063b2fa1c9e1461004d578063ed7f559c14610077575b5f5ffd5b348015610042575f5ffd5b5061004b610093565b005b348015610058575f5ffd5b50610061610164565b60405161006e9190610256565b60405180910390f35b610091600480360381019061008c91906102a6565b610176565b005b5f5f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146100ea575f5ffd5b60025443116100f7575f5ffd5b5f6002544090505f5f5f6101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806001540361016157600160035f6101000a81548160ff0219169083151502179055505b50565b60035f9054906101000a900460ff1681565b5f73ffffffffffffffffffffffffffffffffffffffff165f5f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16146101cd575f5ffd5b670de0b6b3a764000034146101e0575f5ffd5b335f5f6101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806001819055506001436102339190610307565b60028190555050565b5f8115159050919050565b6102508161023c565b82525050565b5f6020820190506102695f830184610247565b92915050565b5f5ffd5b5f819050919050565b61028581610273565b811461028f575f5ffd5b50565b5f813590506102a08161027c565b92915050565b5f602082840312156102bb576102ba61026f565b5b5f6102c884828501610292565b91505092915050565b5f819050919050565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52601160045260245ffd5b5f610311826102d1565b915061031c836102d1565b9250828201905080821115610334576103336102da565b5b9291505056fea2646970667358221220344a6260f122ebac04b2af0604a089224cff225c26634edba24f39adcdf2b8ff64736f6c634300081e0033";
+const bytecode ="6080604052662386f26fc10000341461004d576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610044906100fc565b60405180910390fd5b60014361005a9190610150565b404260405160200161006d9291906101cc565b604051602081830303815290604052805190602001205f1c5f5f6101000a81548160ff021916908360ff1602179055506101f7565b5f82825260208201905092915050565b7f4d7573742073656e642065786163746c7920302e3031206574686572000000005f82015250565b5f6100e6601c836100a2565b91506100f1826100b2565b602082019050919050565b5f6020820190508181035f830152610113816100da565b9050919050565b5f819050919050565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52601160045260245ffd5b5f61015a8261011a565b91506101658361011a565b925082820390508181111561017d5761017c610123565b5b92915050565b5f819050919050565b5f819050919050565b6101a66101a182610183565b61018c565b82525050565b5f819050919050565b6101c66101c18261011a565b6101ac565b82525050565b5f6101d78285610195565b6020820191506101e782846101b5565b6020820191508190509392505050565b610274806102045f395ff3fe608060405260043610610028575f3560e01c80634ba4c16b1461002c578063b2fa1c9e14610048575b5f5ffd5b61004660048036038101906100419190610168565b610072565b005b348015610053575f5ffd5b5061005c610125565b60405161006991906101ad565b60405180910390f35b662386f26fc1000034146100bb576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016100b290610220565b60405180910390fd5b5f5f9054906101000a900460ff1660ff168160ff1603610122573373ffffffffffffffffffffffffffffffffffffffff166108fc671bc16d674ec8000090811502906040515f60405180830381858888f19350505050158015610120573d5f5f3e3d5ffd5b505b50565b5f5f4714905090565b5f5ffd5b5f60ff82169050919050565b61014781610132565b8114610151575f5ffd5b50565b5f813590506101628161013e565b92915050565b5f6020828403121561017d5761017c61012e565b5b5f61018a84828501610154565b91505092915050565b5f8115159050919050565b6101a781610193565b82525050565b5f6020820190506101c05f83018461019e565b92915050565b5f82825260208201905092915050565b7f4d7573742073656e642065786163746c7920302e3031206574686572000000005f82015250565b5f61020a601c836101c6565b9150610215826101d6565b602082019050919050565b5f6020820190508181035f830152610237816101fe565b905091905056fea2646970667358221220a017e5be9d2b4ec6cce0bcbc20d619b1e421ddee13f65974056face7b2c7284264736f6c634300081e0033";
 const abi = require("./Challenge1abi.json");
 const web3 = new Web3(process.env.REACT_APP_ALCHEMY_SEPOLIA_URL);
 
@@ -20,7 +19,7 @@ const Challenge5 = () => {
   const [solveCount, setSolveCount] = useState(0);
 
   React.useEffect(() => {
-    const savedAddress = localStorage.getItem("deployedChallengeAddress");
+    const savedAddress = localStorage.getItem("deployedChallenge6Address");
     if (savedAddress) {
       setDeployedAddress(savedAddress);
       iscompletecheck();
@@ -89,7 +88,7 @@ const Challenge5 = () => {
         );
         setDeployedAddress(newContractInstance.options.address);
         localStorage.setItem(
-          "deployedChallengeAddress",
+          "deployedChallenge6Address",
           newContractInstance.options.address
         );
 
@@ -107,7 +106,7 @@ const Challenge5 = () => {
   };
 
   const iscompletecheck = async () => {
-    const contractAddress = localStorage.getItem("deployedChallengeAddress");
+    const contractAddress = localStorage.getItem("deployedChallenge6Address");
     console.log("Stored contract address:", contractAddress);
 
     if (!contractAddress) {
@@ -139,7 +138,7 @@ const Challenge5 = () => {
           setChallengeComplete(true);
 
           localStorage.setItem("challengeComplete", "true");
-          localStorage.removeItem("deployedChallengeAddress");
+          localStorage.removeItem("deployedChallenge6Address");
         } else {
           alert("❌ Challenge Incomplete.");
           setCompletionStatus("❌ Challenge Incomplete");
@@ -235,33 +234,30 @@ const Challenge5 = () => {
             style={{ textAlign: "left", marginLeft: "0", paddingLeft: "1rem" }}
           >
             {`
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
 
 contract Hello {
-    address guesser;
-    bytes32 guess;
-    uint256 settlementBlockNumber;
-    bool public isComplete = false;
-    function lockInGuess(bytes32 hash) public payable {
-        require(guesser == address(0));
-        require(msg.value == 1 ether);
+    uint8 private answer;
 
-        guesser = msg.sender;
-        guess = hash;
-        settlementBlockNumber = block.number + 1;
+    constructor() payable {
+        require(msg.value == 0.01 ether, "Must send exactly 0.01 ether");
+        answer = uint8(uint256(keccak256(abi.encodePacked(blockhash(block.number - 1), block.timestamp))));
     }
-    function settle() public {
-        require(msg.sender == guesser);
-        require(block.number > settlementBlockNumber);
 
-        bytes32 answer = blockhash(settlementBlockNumber);
+    function isComplete() public view returns (bool) {
+        return address(this).balance == 0;
+    }
 
-        guesser = address(0);
-        if (guess == answer) {
-            isComplete = true;
+    function guess(uint8 n) public payable {
+        require(msg.value == 0.01 ether, "Must send exactly 0.01 ether");
+
+        if (n == answer) {
+            payable(msg.sender).transfer(2 ether);
         }
     }
 }
+
 `}
           </pre>
         </div>

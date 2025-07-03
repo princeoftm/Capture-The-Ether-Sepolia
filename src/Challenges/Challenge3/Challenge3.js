@@ -20,7 +20,7 @@ const Challenge2 = () => {
   const [solveCount, setSolveCount] = useState(0);
 
   React.useEffect(() => {
-    const savedAddress = localStorage.getItem("deployedChallengeAddress");
+    const savedAddress = localStorage.getItem("deployedChallenge3Address");
     if (savedAddress) {
       setDeployedAddress(savedAddress);
       iscompletecheck();
@@ -89,7 +89,7 @@ const Challenge2 = () => {
         );
         setDeployedAddress(newContractInstance.options.address);
         localStorage.setItem(
-          "deployedChallengeAddress",
+          "deployedChallenge3Address",
           newContractInstance.options.address
         );
 
@@ -107,7 +107,7 @@ const Challenge2 = () => {
   };
 
   const iscompletecheck = async () => {
-    const contractAddress = localStorage.getItem("deployedChallengeAddress");
+    const contractAddress = localStorage.getItem("deployedChallenge3Address");
     console.log("Stored contract address:", contractAddress);
 
     if (!contractAddress) {
@@ -139,7 +139,7 @@ const Challenge2 = () => {
           setChallengeComplete(true);
 
           localStorage.setItem("challengeComplete", "true");
-          localStorage.removeItem("deployedChallengeAddress");
+          localStorage.removeItem("deployedChallenge3Address");
         } else {
           alert("❌ Challenge Incomplete.");
           setCompletionStatus("❌ Challenge Incomplete");
